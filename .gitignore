@@ -1,0 +1,20 @@
+# Ignore everything
+/*
+
+# But not these files...
+!.gitignore
+!README.md
+!LICENSE
+
+!.aliases.sh
+!.bashrc
+!.hyper.js
+!.Xresources
+!.xinitrc
+!.zshrc
+
+!.config/compton
+!.config/dunst/dunstrc
+!.config/i3
+!.config/polybar
+!.config/redshift

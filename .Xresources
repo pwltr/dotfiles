@@ -1,0 +1,95 @@
+!----------------!
+! FONT RENDERING !
+!----------------!
+
+! Fonts {{{
+    Xft.antialias: true
+    Xft.hinting: full
+    Xft.autohint: 0
+    Xft.lcdfilter: lcddefault
+    Xft.rgba: rgb
+    Xft.hintsyle: hintfull
+    Xft.dpi: 192
+! }}}
+
+
+!--------!
+! COLORS !
+!--------!
+
+! Colors {{{
+    *.foreground:  #4F5B66
+    *.background:  #fafafa
+    *.cursorColor: #F59D6A
+    !
+    ! Black
+    *.color0:      #1D1F21
+    *.color8:      #303845
+    !
+    ! Red
+    *.color1:      #E39194
+    *.color9:      #E39194
+    !
+    ! Green
+    *.color2:      #8FCA9A
+    *.color10:     #00FC6D
+    !
+    ! Yellow
+    *.color3:      #F7EFAE
+    *.color11:     #ffc94a
+    !
+    ! Blue
+    *.color4:      #77ABE7
+    *.color12:     #2C85F7
+    !
+    ! Magenta
+    *.color5:      #CAA6EC
+    *.color13:     #CAA6EC
+    !
+    ! Cyan
+    *.color6:      #4dbf99
+    *.color14:     #7ff1cb
+    !
+    ! White
+    *.color7:      #ffffff
+    *.color15:     #ffffff
+    !
+    ! Bold, Italic, Underline
+    *.colorBD:     #515A6F
+    !*.colorIT:
+    !*.colorUL:
+! }}}
+
+
+!--------------!
+! URXVT CONFIG !
+!--------------!
+
+urxvt.internalBorder:	30
+urxvt.scrollBar:	false
+urxvt.letterSpace:	-1
+urxvt.font: xft:Fura Mono Nerd Font:size=8, xft:Font Awesome 5 Free Solid:size=8
+
+!! Larger history limit
+urxvt.saveLines: 100000
+
+!! Perl extensions
+urxvt.perl-ext-common: default,matcher,font-size,clipboard
+
+!! Open urls in browser with Control-Click
+urxvt.urlLauncher: /usr/bin/firefox
+urxvt.matcher.button: C1
+
+!! Change font size on Control-Plus/Minus
+urxvt.keysym.Control-0x2b: perl:font-size:increase
+urxvt.keysym.Control-0x2d: perl:font-size:decrease
+urxvt.copyCommand: xclip -i -selection clipboard
+urxvt.pasteCommand: xclip -o -selection clipboard
+urxvt.keysym.m-c: perl:clipboard:copy
+urxvt.keysym.m-v: perl:clipboard:paste
+
+urxvt.foreground: #fff
+#urxvt.background: [75]#0b2545
+urxvt.background: [75]#252b33
+#urxvt.cursorColor: #8aeff4
+urxvt.cursorColor: [90]#b8ffe6
