@@ -1,6 +1,7 @@
 # For a full list of active aliases, run `alias`.
 alias a='atom'
 alias ab='atom-beta'
+alias code='code-oss'
 alias hosts='atom /etc/hosts'
 alias zshrc='atom ~/.zshrc'
 

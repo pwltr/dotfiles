@@ -97,22 +97,18 @@ module.exports = {
 
     tabIcons: {},
 
-    hypercwd: {
-      initialWorkingDirectory: '~/Dev',
-    },
+    // hypercwd: {
+    //   initialWorkingDirectory: '~/Dev',
+    // },
 
-    // workingDirectory: '~/Work'
+    workingDirectory: '~/Dev'
   },
 
   // a list of plugins to fetch and install from npm
   // format: [@org/]project[#version]
-  // examples:
-  //   `hyperpower`
-  //   `@company/project`
-  //   `project#1.0.1`
   plugins: [
     'hyper-blink',
-    'hypercwd',
+    // 'hypercwd',
     'hyper-hide-title',
     'hyper-oceans16',
     'hyper-statusline',
@@ -124,7 +120,7 @@ module.exports = {
     // 'hyper-vibrant',
     // 'hyper-simple-vibrancy',
     // 'custom-simple-vibrancy',
-    // 'hyperterm-working-directory',
+    'hyperterm-working-directory',
   ],
 
   // in development, you can create a directory under
