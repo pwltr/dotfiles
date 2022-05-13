@@ -12,9 +12,6 @@ for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
 done
 unset file
 
-# Store your own aliases in the ~/.aliases file and load them here.
-# [[ -f "$HOME/.aliases" ]] && source "$HOME/.aliases"
-
 # Disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
 
@@ -108,7 +105,7 @@ if [ -d "$HOME/platform-tools" ]; then
 fi
 
 # Add Citadel CLI
-if [ -d "$PATH:$HOME/.citadel/bin" ]; then
+if [ -d "$HOME/.citadel/bin" ]; then
   export PATH="$PATH:$HOME/.citadel/bin"
 fi
 
