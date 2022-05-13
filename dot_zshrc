@@ -4,9 +4,6 @@ export ZSH=$HOME/.oh-my-zsh
 # Load our custom theme
 ZSH_THEME="custom"
 
-# Actually load oh-my-zsh
-source $ZSH/oh-my-zsh.sh
-
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
@@ -53,6 +50,9 @@ plugins=(
   zsh-syntax-highlighting
 )
 
+# Actually load oh-my-zsh
+source $ZSH/oh-my-zsh.sh
+
 #### User configuration ####
 
 export PATH="/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
@@ -97,7 +97,7 @@ export BROWSER=/usr/bin/brave
 export ANDROID_HOME=/usr/local/opt/android-sdk
 
 # Cargo
-source $HOME/.cargo/env
+[ -s "$HOME/.cargo/env" ] && source $HOME/.cargo/env
 
 # Add ellipsis to $PATH
 export PATH="$HOME/.ellipsis/bin:$PATH"
@@ -108,7 +108,9 @@ if [ -d "$HOME/platform-tools" ]; then
 fi
 
 # Add Citadel CLI
-export PATH="$PATH:$HOME/.citadel/bin"
+if [ -d "$PATH:$HOME/.citadel/bin" ]; then
+  export PATH="$PATH:$HOME/.citadel/bin"
+fi
 
 ##########################################
 ########        AUTO START        ########
