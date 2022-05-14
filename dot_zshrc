@@ -72,9 +72,6 @@ unset file
 
 export PATH="/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
 
-# Adds `~/.local/bin` to $PATH
-# export PATH="$PATH:${$(find ~/.local/bin -type d -printf %p:)%%:}"
-
 # Android
 export ANDROID_HOME=/usr/local/opt/android-sdk
 
