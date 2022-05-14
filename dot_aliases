@@ -5,6 +5,9 @@ alias code='vscodium'
 alias hosts='code /etc/hosts'
 alias zshrc='code ~/.zshrc'
 
+# Use neovim for vim if present.
+[ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
+
 # Git
 alias gi="git init"
 alias gs="git status"

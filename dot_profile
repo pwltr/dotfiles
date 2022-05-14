@@ -1,0 +1,10 @@
+# Bash specific stuff
+if echo $SHELL | grep 'bash' >/dev/null; then
+	export HISTCONTROL=ignoreboth:erasedups
+	if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
+fi
+
+# ZSH specific stuff
+if echo "$SHELL" | grep 'zsh' >/dev/null; then
+	if [ -f ~/.zshrc ]; then . ~/.zshrc; fi
+fi
