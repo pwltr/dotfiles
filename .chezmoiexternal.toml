@@ -10,11 +10,11 @@
     exact = true
     stripComponents = 1
     refreshPeriod = "168h"
-    # include = ["*/*.zsh", "*/.version", "*/.revision-hash", "*/highlighters/**"]
+    exclude = ["*/*.github", "*/*docs", "*/*images", "*/*tests"]
 [".oh-my-zsh-custom/plugins/zsh-autosuggestions"]
     type = "archive"
     url = "https://github.com/zsh-users/zsh-autosuggestions/archive/master.tar.gz"
     exact = true
     stripComponents = 1
     refreshPeriod = "168h"
-    # include = ["*/*.zsh", "*/.version", "*/.revision-hash", "*/highlighters/**"]
+    exclude = ["*/*.circleci", "*/*.github", "*/*spec", "*/*src"]
