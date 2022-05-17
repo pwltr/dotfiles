@@ -1,3 +1,12 @@
+#!/bin/sh
+
+##########################################
+########    UTILS & SHORTCUTS     ########
+##########################################
+
+# Remove a path from the $PATH environment variable
+function remove_path() { export PATH="$(echo $PATH | tr : '\n' | grep -v "$1" | paste -sd:)"; }
+
 # Determine size of a file or total size of a directory
 function fs() {
   if du -b /dev/null >/dev/null 2>&1; then

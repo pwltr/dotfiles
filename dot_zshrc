@@ -28,7 +28,7 @@ ZSH_THEME="custom"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Custom plugins may be added to ~/.oh-my-zsh-custom/plugins/
 plugins=(
   command-not-found
   # compleat
@@ -50,14 +50,17 @@ NVM_LAZY=1
 # Actually load oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
+##########################################
+########         DOTFILES         ########
+##########################################
+
 # Define which files to load
 dotfiles=(
   ~/.path
   ~/.exports
   ~/.aliases
   ~/.functions
-  # can be used for other settings you don’t want to commit.
-  ~/.extra
+  ~/.extra # use this for local overrides
 )
 
 # Load everything in
@@ -65,34 +68,6 @@ for file in $dotfiles; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file"
 done
 unset file
-
-##########################################
-########     Exports & Paths      ########
-##########################################
-
-export PATH="/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
-
-# Android
-export ANDROID_HOME=/usr/local/opt/android-sdk
-
-# Jabba
-[ -s "$JABBA_HOME/jabba.sh" ] && source "$JABBA_HOME/jabba.sh"
-
-# Cargo
-[ -s "$HOME/.cargo/env" ] && source $HOME/.cargo/env
-
-# Add ellipsis to $PATH
-export PATH="$HOME/.ellipsis/bin:$PATH"
-
-# Add Android SDK platform tools to $PATH
-if [ -d "$HOME/platform-tools" ]; then
-  PATH="$HOME/platform-tools:$PATH"
-fi
-
-# Add Citadel CLI
-if [ -d "$HOME/.citadel/bin" ]; then
-  export PATH="$PATH:$HOME/.citadel/bin"
-fi
 
 ##########################################
 ########        AUTO START        ########

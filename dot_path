@@ -1,13 +1,28 @@
 #!/bin/sh
 
-# go path
+##########################################
+########      ADD TO $PATH        ########
+##########################################
+
+# Rust & Cargo
+[ -s "$HOME/.cargo/env" ] && source $HOME/.cargo/env
+
+# Go
 export GOPATH="${HOME}/.go"
-
-# update path
-export PATH=/usr/local/bin:${PATH}:/sbin:/usr/local/sbin
-
-# add go path
 export PATH="/usr/local/go/bin:${GOPATH}/bin:${PATH}"
 
-# add rust path
-export PATH="${HOME}/.cargo/bin:${PATH}"
+# Android
+export ANDROID_HOME=/usr/local/opt/android-sdk
+
+# Android SDK Platform Tools
+if [ -d "$HOME/platform-tools" ]; then
+  PATH="$HOME/platform-tools:$PATH"
+fi
+
+# Jabba (NVM for Java)
+[ -s "$JABBA_HOME/jabba.sh" ] && source "$JABBA_HOME/jabba.sh"
+
+# Citadel CLI
+if [ -d "$HOME/.citadel/bin" ]; then
+  export PATH="$PATH:$HOME/.citadel/bin"
+fi
