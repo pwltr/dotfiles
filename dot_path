@@ -8,19 +8,22 @@
 [ -s "$HOME/.cargo/env" ] && source $HOME/.cargo/env
 
 # Go
-export GOPATH="${HOME}/.go"
-export PATH="/usr/local/go/bin:${GOPATH}/bin:${PATH}"
+# export GOPATH="${HOME}/.go"
+# export PATH="/usr/local/go/bin:${GOPATH}/bin:${PATH}"
+
+# Jabba (Java Version Manager)
+[ -s "$HOME/.jabba/jabba.sh" ] && source "$HOME/.jabba/jabba.sh"
 
 # Android
-export ANDROID_HOME=/usr/local/opt/android-sdk
+# export ANDROID_HOME=/usr/local/opt/android-sdk
+export ANDROID_SDK_ROOT=$HOME/.Android
+export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
+export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 
 # Android SDK Platform Tools
 if [ -d "$HOME/platform-tools" ]; then
   PATH="$HOME/platform-tools:$PATH"
 fi
-
-# Jabba (NVM for Java)
-[ -s "$JABBA_HOME/jabba.sh" ] && source "$JABBA_HOME/jabba.sh"
 
 # Citadel CLI
 if [ -d "$HOME/.citadel/bin" ]; then
