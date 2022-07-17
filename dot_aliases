@@ -5,15 +5,6 @@ alias code='vscodium'
 alias hosts='code /etc/hosts'
 alias zshrc='code ~/.zshrc'
 
-# Neovim instead of vim
-[ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
-
-# Micro instead of nano
-[ -x "$(command -v micro)" ] && alias nano="micro"
-
-# Gotop instead of top
-[ -x "$(command -v gotop)" ] && alias top="gotop"
-
 # Git
 alias gi="git init"
 alias gs="git status"
@@ -28,15 +19,21 @@ alias glo="git log --oneline"
 alias grhh="git reset --hard HEAD"
 alias gcp="git cherry-pick $1"
 
-# npm
-alias nid="npm i -D "
-alias nr="npm run $1"
-alias nrs="npm run start"
-alias nrw="npm run watch"
-alias nrb="npm run build"
-
 # Files
-alias l="ls -o -hX --group-directories-first"
+# alias l="ls -o -hX --group-directories-first"
+
+# Neovim instead of vim
+[ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
+
+# Micro instead of nano
+[ -x "$(command -v micro)" ] && alias nano="micro"
+
+# Gotop instead of top
+[ -x "$(command -v gotop)" ] && alias top="gotop"
+
+# Exa instead of ls
+[ -x "$(command -v exa)" ] && alias l="exa --long --header --git"
+
 
 # Drop-in replacement for cat
 alias cat='bat'
