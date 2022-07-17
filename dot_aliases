@@ -6,7 +6,6 @@ alias hosts='code /etc/hosts'
 alias zshrc='code ~/.zshrc'
 
 # Git
-alias gi="git init"
 alias gs="git status"
 alias gd="git diff"
 alias gdh="git diff HEAD"
@@ -19,33 +18,24 @@ alias glo="git log --oneline"
 alias grhh="git reset --hard HEAD"
 alias gcp="git cherry-pick $1"
 
-# Files
+# List files
 # alias l="ls -o -hX --group-directories-first"
-
-# Neovim instead of vim
-[ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
-
-# Micro instead of nano
-[ -x "$(command -v micro)" ] && alias nano="micro"
-
-# Gotop instead of top
-[ -x "$(command -v gotop)" ] && alias top="gotop"
-
-# Exa instead of ls
-[ -x "$(command -v exa)" ] && alias l="exa --long --header --git"
-
-
 # Drop-in replacement for cat
 alias cat='bat'
-
 # Weather
 alias weather='curl wttr.in'
-
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec ${SHELL} -l"
-
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
-
-# Reconnect ProtonVPN
+# ProtonVPN
 alias proton='protonvpn-cli d || true && protonvpn-cli c --cc AT'
+
+# Neovim <-> vim
+[ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
+# Micro <-> nano
+[ -x "$(command -v micro)" ] && alias nano="micro"
+# Gotop <-> top
+[ -x "$(command -v gotop)" ] && alias top="gotop"
+# Exa <-> ls
+[ -x "$(command -v exa)" ] && alias l="exa --long --header --git"
